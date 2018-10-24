@@ -1,4 +1,4 @@
-module manysum
+module ManySum
 
 greet() = print("Hello World!")
 

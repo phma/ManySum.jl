@@ -1,4 +1,4 @@
-using manysum
+using ManySum
 using Test
 
 @testset "manysum.jl" begin
