@@ -1,5 +1,7 @@
 module ManySum
+using DataStructures
 export pairwiseSum!
+export Manysum
 
 function pairwiseSum!(a::Array{T})::T where T<:AbstractFloat
   i=1
@@ -17,6 +19,13 @@ function pairwiseSum!(a::Array{T})::T where T<:AbstractFloat
   end
 end
 
-greet() = print("Hello World!")
+struct Manysum{T <: AbstractFloat}
+  bucket ::SortedDict{Int,T}
+  function Manysum()
+    msum=new{T}()
+    bucket=SortedDict{Int,T}()
+    msum
+  end
+end
 
 end # module
