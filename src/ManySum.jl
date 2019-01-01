@@ -21,7 +21,7 @@ end
 
 struct Manysum{T <: AbstractFloat}
   bucket ::SortedDict{Int,T}
-  function Manysum()
+  function Manysum()::T
     msum=new{T}()
     bucket=SortedDict{Int,T}()
     msum
